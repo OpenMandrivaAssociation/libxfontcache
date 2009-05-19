@@ -74,7 +74,7 @@ Static development files for %{name}
 %setup -q -n libXfontcache-%{version}
 
 %build
-%configure	--x-includes=%{_includedir}\
+%configure2_5x	--x-includes=%{_includedir}\
 		--x-libraries=%{_libdir}
 
 %make
