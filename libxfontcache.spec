@@ -1,8 +1,8 @@
 %define libxfontcache %mklibname xfontcache 1
 Name: libxfontcache
 Summary:  The Xfontcache Library
-Version: 1.0.4
-Release: %mkrel 4
+Version: 1.0.5
+Release: %mkrel 1
 Group: Development/X11
 License: MIT
 URL: http://xorg.freedesktop.org
