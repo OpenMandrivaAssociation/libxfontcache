@@ -2,7 +2,7 @@
 Name: libxfontcache
 Summary:  The Xfontcache Library
 Version: 1.0.5
-Release: %mkrel 3
+Release: %mkrel 4
 Group: Development/X11
 License: MIT
 URL: http://xorg.freedesktop.org
@@ -46,7 +46,6 @@ Development files for %{name}
 %files -n %{libxfontcache}-devel
 %defattr(-,root,root)
 %{_libdir}/libXfontcache.so
-%{_libdir}/libXfontcache.la
 %{_libdir}/pkgconfig/xfontcache.pc
 %{_mandir}/man3/FontCache*
 %{_mandir}/man3/Xfontcache*
@@ -97,3 +96,59 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/libXfontcache.so.1
 %{_libdir}/libXfontcache.so.1.0.0
+
+
+%changelog
+* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 1.0.5-3mdv2011.0
++ Revision: 661558
+- mass rebuild
+
+* Sun Nov 28 2010 Oden Eriksson <oeriksson@mandriva.com> 1.0.5-2mdv2011.0
++ Revision: 602619
+- rebuild
+
+* Mon Nov 09 2009 Thierry Vignaud <tv@mandriva.org> 1.0.5-1mdv2010.1
++ Revision: 463587
+- new release
+
+* Wed Sep 02 2009 Christophe Fergeau <cfergeau@mandriva.com> 1.0.4-4mdv2010.0
++ Revision: 425921
+- rebuild
+- Use %%configure2_5x instead of %%configure to avoid an unneeded (and harmful for the build) call to libtoolize
+
+* Tue Jun 17 2008 Thierry Vignaud <tv@mandriva.org> 1.0.4-3mdv2009.0
++ Revision: 223074
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+  + Paulo Andrade <pcpa@mandriva.com.br>
+    - Revert build requires.
+
+* Tue Jan 15 2008 Paulo Andrade <pcpa@mandriva.com.br> 1.0.4-2mdv2008.1
++ Revision: 153306
+- Update BuildRequires and rebuild
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+    - kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+
+* Thu Feb 15 2007 Thierry Vignaud <tvignaud@mandriva.com> 1.0.4-1mdv2007.0
++ Revision: 121456
+- new release
+
+  + Gustavo Pichorim Boiko <boiko@mandriva.com>
+    - rebuild to fix cooker uploading
+    - X11R7.1
+    - increment release
+    - fixed more dependencies
+    - Adding X.org 7.0 to the repository
+
+  + Andreas Hasenack <andreas@mandriva.com>
+    - renamed mdv to packages because mdv is too generic and it's hosting only packages anyway
+
