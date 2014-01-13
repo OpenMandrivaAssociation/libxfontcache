@@ -5,7 +5,7 @@
 Summary:	The Xfontcache Library
 Name:		libxfontcache
 Version:	1.0.5
-Release:	7
+Release:	8
 Group:		Development/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
